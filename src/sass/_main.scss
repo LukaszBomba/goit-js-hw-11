@@ -1,72 +1,75 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(26, 100, 210);
-    width: 100%;
-    height: 50px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282a36;
+  width: 100%;
+  height: 80px;
 }
 
 .header_form-input {
-    position: relative;
-    width: 20vw;
-    height: 30px;
-    padding-left: 20px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
+  position: relative;
+  width: 20vw;
+  height: 50px;
+  padding-left: 22px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .header_form-submit {
-    position: absolute;
-    border: none;
-    border-radius: 4px;
-    width: 50px;
-    height: 32px;
-    left: 60%;
-    background-color: rgb(255, 255, 255);
+  position: absolute;
+  border: none;
+  border-radius: 4px;
+  width: 50px;
+  height: 52px;
+  left: 60%;
+  background-color: #cdcdcd;
 }
-.gallery{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100vw;
-    height: 100%;
-    padding-top: 100px;
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100vw;
+  height: 100%;
+  padding-top: 100px;
 }
-.photo-card{
-flex-basis: calc((100% + 300px)/5);
-border-radius: 4px;
-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+.photo-card {
+  flex-basis: calc((100% + 300px) / 5);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
-.info{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e5e5e5;
+  -webkit-box-shadow: 0px 11px 16px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 11px 16px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 11px 16px 0px rgba(66, 68, 90, 1);
 }
-.info-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    gap: 5px;
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  font-size: large;
 }
-a{
-    width: auto;
-    height: auto;
+a {
+  width: auto;
+  height: auto;
 }
 
 img {
-    display: block;
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+  display: block;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
