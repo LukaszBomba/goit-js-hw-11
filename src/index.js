@@ -1,18 +1,21 @@
 import './sass/index.scss';
-import { fetchPhoto } from './js/fetchPhoto';
-import { pictureGallery } from './js/pictureGallery';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import { fetchPhoto } from './js/fetchPhoto';
+import { pictureGallery } from './js/pictureGallery';
 
 let page = 1;
-const query = document.querySelector('.header_form-input');
+
+const input = document.querySelector('.header_form-input');
+
 const button = document.querySelector('.header_form-submit');
+
 const lightbox = new SimpleLightbox('.gallery a');
 
 button.addEventListener('click', event => {
   event.preventDefault();
-  fetchPhoto(query.value, page)
+  fetchPhoto(input.value, page)
     .then(({ data }) => {
       document.querySelector('.gallery').innerHTML = '';
       page = 1;
@@ -41,7 +44,7 @@ window.addEventListener('scroll', () => {
     document.documentElement.scrollHeight
   ) {
     page++,
-      fetchPhoto(query.value, page)
+      fetchPhoto(input.value, page)
         .then(({ data }) => {
           return pictureGallery(data.hits), lightbox.refresh();
         })
