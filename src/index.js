@@ -24,11 +24,8 @@ button.addEventListener('click', event => {
           'Sorry, there are no images matching your search query. Please try again.'
         );
       }
-      return (
-        Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`),
-        pictureGallery(data.hits),
-        lightbox.refresh()
-      );
+      return;
+      pictureGallery(data.hits), lightbox.refresh();
     })
     .catch(error => {
       Notiflix.Notify.failure(error);
